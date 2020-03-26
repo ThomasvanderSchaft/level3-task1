@@ -19,11 +19,14 @@ class ProfileActivity : AppCompatActivity() {
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.title = "This is your profile!"
 
+        //creates value with parcelable item
         val profile = intent.getParcelableExtra<Profile>(PROFILE_EXTRA)
 
+        //checks if there is an existing profile
         if (profile != null) {
             tvName.text = getString(R.string.name, profile.firstName, profile.lastName)
             tvDescription.text = profile.description
+            //if image is present, replace the profile image
             if (profile.imageUri != null) {
                 ivProfileImage.setImageURI(profile.imageUri)
             }

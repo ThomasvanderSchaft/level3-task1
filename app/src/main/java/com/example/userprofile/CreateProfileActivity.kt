@@ -36,6 +36,7 @@ class CreateProfileActivity : AppCompatActivity() {
     }
 
     private fun onConfirmClick() {
+        //creates profile object
         val profile = Profile(
             etFirstName.text.toString(),
             etLastName.text.toString(),
@@ -48,7 +49,7 @@ class CreateProfileActivity : AppCompatActivity() {
         startActivity(profileActivityIntent)
     }
 
-
+    //calling the method that provides the result of an intent
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         if (resultCode == Activity.RESULT_OK) {
             when (requestCode) {

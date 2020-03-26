@@ -5,6 +5,7 @@ import android.os.Parcelable
 import kotlinx.android.parcel.Parcelize
 
 @Parcelize
+//creates profile data class
 data class Profile(
     val firstName: String,
     val lastName: String,
